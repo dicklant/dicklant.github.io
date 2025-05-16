@@ -22,6 +22,8 @@ jobs:
         uses: subosito/flutter-action@v2
         with:
           flutter-version: '3.10.0' # Spécifiez la version de Flutter que vous utilisez
+      - name: unset analytics
+        run: flutter --disable-telemetry
       - name: Install dependencies
         run: flutter pub get
       - name: Build web
